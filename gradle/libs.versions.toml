@@ -1,0 +1,18 @@
+# 用于定义所有版本的变量
+[versions]
+spring-boot = "3.4.4"
+lombok = "1.18.36"
+
+# 依赖
+[libraries]
+lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok" }
+spring-boot-starter-web = { group = "org.springframework.boot", name = "spring-boot-starter-web"}
+
+
+# 你可以将多个相关的库打包成一个“bundle”
+[bundles]
+
+
+# 定义插件
+[plugins]
+spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
