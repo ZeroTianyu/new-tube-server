@@ -2,6 +2,7 @@ plugins{
     java
     idea
     alias(libs.plugins.spring.boot)
+    alias(libs.plugins.spring.dependency.management)
 }
 
 
@@ -9,6 +10,7 @@ plugins{
 allprojects {
     apply(plugin = "java")
     apply(plugin = "idea")
+    apply(plugin = "io.spring.dependency-management")
     apply(plugin = "org.springframework.boot")
 
 
