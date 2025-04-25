@@ -1,0 +1,6 @@
+server:
+  port: 30001
+spring:
+  application:
+    name: new-tube-auth
+

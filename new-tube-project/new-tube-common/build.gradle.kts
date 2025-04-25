@@ -1,5 +1,5 @@
 dependencies {
-    implementation(libs.lombok)
+    compileOnly(libs.lombok)
     annotationProcessor(libs.lombok)
 
 }
