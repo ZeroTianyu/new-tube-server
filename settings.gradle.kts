@@ -1,4 +1,4 @@
-rootProject.name = "new-tube"
+rootProject.name = "new-tube-server"
 include("new-tube-project")
 include("new-tube-project:new-tube-auth")
 findProject(":new-tube-project:new-tube-auth")?.name = "new-tube-auth"

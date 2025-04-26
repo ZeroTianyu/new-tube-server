@@ -1,4 +1,7 @@
-plugins{
+import org.gradle.kotlin.dsl.named
+import org.springframework.boot.gradle.tasks.run.BootRun
+
+plugins {
     java
     idea
     alias(libs.plugins.spring.boot)
@@ -23,6 +26,24 @@ allprojects {
         maven("https://maven.aliyun.com/nexus/content/groups/public/")
         maven("https://maven.aliyun.com/repository/gradle-plugin")
         mavenCentral()
+    }
+}
+
+subprojects {
+
+    val buildEnv = project.findProperty("buildEnv")?.toString() ?: "dev"
+
+    tasks.named<ProcessResources>("processResources") {
+        from("src/main/resources") {
+            exclude("**/application-*.yml")
+        }
+
+        from("src/main/resources") {
+            include("application-$buildEnv.yml")
+            rename("application-$buildEnv.yml", "application.yml")
+        }
+
+        duplicatesStrategy = DuplicatesStrategy.INCLUDE
     }
 }
 
