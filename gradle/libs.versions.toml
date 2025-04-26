@@ -15,7 +15,7 @@ spring-boot-starter-test = { group = "org.springframework.boot", name = "spring-
 
 # 可以将多个相关的库打包成一个“bundle”
 [bundles]
-newtube-boot = ["lombok","spring-boot-starter-web"]
+newtube-boot = ["spring-boot-starter-web"]
 newtube-boot-test = ["spring-boot-starter-test"]
 # 定义插件
 [plugins]
