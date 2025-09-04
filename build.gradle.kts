@@ -1,6 +1,3 @@
-import org.gradle.kotlin.dsl.named
-import org.springframework.boot.gradle.tasks.run.BootRun
-
 plugins {
     java
     idea
@@ -31,27 +28,7 @@ allprojects {
 
 subprojects {
 
-    val buildEnv = project.findProperty("buildEnv")?.toString() ?: "dev"
-
-    tasks.named<ProcessResources>("processResources") {
-        from("src/main/resources") {
-            exclude("**/application-*.yml")
-        }
-
-        from("src/main/resources") {
-            include("application-$buildEnv.yml")
-            rename("application-$buildEnv.yml", "application.yml")
-        }
-
-        duplicatesStrategy = DuplicatesStrategy.INCLUDE
-    }
-}
-
-
-dependencies {
 
 }
 
-tasks.test {
 
-}

@@ -11,6 +11,11 @@ dependencies {
     runtimeOnly(libs.mysql)
 }
 
+
+springBoot {
+    mainClass.set("com.newtube.auth.AuthApplication")
+}
+
 tasks.test {
     useJUnitPlatform()
 }
