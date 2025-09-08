@@ -1,0 +1,24 @@
+# 用于定义所有版本的变量
+[versions]
+mysql = "8.0.33"
+spring-boot = "3.4.4"
+spring-dependency-management = "1.1.7"
+lombok = "1.18.40"
+
+# 依赖
+[libraries]
+lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok" }
+mysql = { group = "mysql", name = "mysql-connector-java", version.ref = "mysql" }
+
+spring-boot-starter-web = { group = "org.springframework.boot", name = "spring-boot-starter-web" }
+spring-boot-starter-test = { group = "org.springframework.boot", name = "spring-boot-starter-test" }
+
+
+# 可以将多个相关的库打包成一个“bundle”
+[bundles]
+newtube-boot = ["spring-boot-starter-web"]
+newtube-boot-test = ["spring-boot-starter-test"]
+# 定义插件
+[plugins]
+spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
+spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "spring-dependency-management" }
