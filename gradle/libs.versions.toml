@@ -1,14 +1,17 @@
 # 用于定义所有版本的变量
 [versions]
 mysql = "8.0.33"
-spring-boot = "3.4.4"
+spring-boot = "3.4.5"
 spring-dependency-management = "1.1.7"
 lombok = "1.18.40"
+sa-token = "1.44.0"
 
 # 依赖
 [libraries]
 lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok" }
 mysql = { group = "mysql", name = "mysql-connector-java", version.ref = "mysql" }
+
+sa-token = { group = "cn.dev33", name = "sa-token-spring-boot3-starter", version.ref = "sa-token" }
 
 spring-boot-starter-web = { group = "org.springframework.boot", name = "spring-boot-starter-web" }
 spring-boot-starter-test = { group = "org.springframework.boot", name = "spring-boot-starter-test" }
